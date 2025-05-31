@@ -149,13 +149,14 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 575px) {
   .hero {
-    padding-top: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .hero-content h1 {
-    font-size: 32px;
+    font-size: 46px;
   }
 
   .hero-image img {
@@ -171,6 +172,6 @@
   }
 
   .reviews {
-    width: 90%;
+    width: 70%;
   }
 }
