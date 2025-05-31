@@ -438,7 +438,7 @@ select:-webkit-autofill:focus {
 /* all button css end here */
 
 /* Section Gap css Start Here */
-.sec-gap {
+/* .sec-gap {
   padding: 80px 0px 20px 0px;
   transition: var(--transition);
 }
@@ -459,7 +459,7 @@ select:-webkit-autofill:focus {
   .sec-gap {
     padding: 70px 0px 0px 0px;
   }
-}
+} */
 /* Section Gap css End Here */
 
 body::-webkit-scrollbar-thumb {

@@ -5,8 +5,27 @@ import "../../App.css";
 import logo from "../../assets/logo.png";
 // import logo from "../../assets/logo.svg";
 import cvFile from "../../assets/cv.pdf";
+import { useEffect } from "react";
 
 function Header() {
+  useEffect(() => {
+    const header = document.querySelector(".header");
+
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleDownload = () => {
@@ -27,10 +46,30 @@ function Header() {
 
       {/* Navigation Links */}
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <NavLink to="/" className="nav-item" onClick={() => setMenuOpen(false)}>Home</NavLink>
-        <NavLink to="/service" className="nav-item" onClick={() => setMenuOpen(false)}>Service</NavLink>
-        <NavLink to="/project" className="nav-item" onClick={() => setMenuOpen(false)}>Projects</NavLink>
-        <NavLink to="/contact" className="nav-item" onClick={() => setMenuOpen(false)}>Contact</NavLink>
+        <NavLink to="/" className="nav-item" onClick={() => setMenuOpen(false)}>
+          Home
+        </NavLink>
+        <NavLink
+          to="/service"
+          className="nav-item"
+          onClick={() => setMenuOpen(false)}
+        >
+          Service
+        </NavLink>
+        <NavLink
+          to="/project"
+          className="nav-item"
+          onClick={() => setMenuOpen(false)}
+        >
+          Projects
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className="nav-item"
+          onClick={() => setMenuOpen(false)}
+        >
+          Contact
+        </NavLink>
       </nav>
 
       <div className="btn-flex">
@@ -38,8 +77,23 @@ function Header() {
           <div className="button-wrapper">
             <div className="text">Download CV</div>
             <span className="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                role="img"
+                width="2em"
+                height="2em"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
+                ></path>
               </svg>
             </span>
           </div>
@@ -57,4 +111,3 @@ function Header() {
 }
 
 export default Header;
- 
