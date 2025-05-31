@@ -17,19 +17,31 @@
 }
 
 .logo img {
-  transition: 0.5s all ease-in-out;
-  width: 50px;
+  transition: var(--transition);
+  width: 60px;
+}
+
+@media (max-width: 991px) {
+  .logo img {
+    width: 55px;
+  }
 }
 
 @media (max-width: 767px) {
   .logo img {
-    width: 40px;
+    width: 50px;
   }
 }
 
 @media (max-width: 575px) {
   .logo img {
-    width: 35px;
+    width: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 40px;
   }
 }
 
