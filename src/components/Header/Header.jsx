@@ -46,30 +46,10 @@ function Header() {
 
       {/* Navigation Links */}
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <NavLink to="/" className="nav-item" onClick={() => setMenuOpen(false)}>
-          Home
-        </NavLink>
-        <NavLink
-          to="/service"
-          className="nav-item"
-          onClick={() => setMenuOpen(false)}
-        >
-          Service
-        </NavLink>
-        <NavLink
-          to="/project"
-          className="nav-item"
-          onClick={() => setMenuOpen(false)}
-        >
-          Projects
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className="nav-item"
-          onClick={() => setMenuOpen(false)}
-        >
-          Contact
-        </NavLink>
+        <NavLink to="/" className="nav-item" onClick={() => setMenuOpen(false)}>Home</NavLink>
+        <NavLink to="/service" className="nav-item" onClick={() => setMenuOpen(false)}>Service</NavLink>
+        <NavLink to="/project" className="nav-item" onClick={() => setMenuOpen(false)}>Projects</NavLink>
+        <NavLink to="/contact" className="nav-item" onClick={() => setMenuOpen(false)}> Contact</NavLink>
       </nav>
 
       <div className="btn-flex">
