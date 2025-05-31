@@ -1,0 +1,480 @@
+/* Poppins Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #286f6c;
+  --secondary-color: #edb33c;
+  --white: #ffffff;
+  --black: #000000;
+  --text: #0d2f3f;
+  --body: #f8f7f1;
+  --font-main: "Poppins", sans-serif;
+  -transition: 0.5s all ease-in-out;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+#root {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100vh;
+}
+
+body {
+  max-width: 2560px;
+  margin: auto !important;
+  box-sizing: border-box;
+  font-family: var(--secondary-font);
+  font-weight: normal;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--body);
+  color: var(--text);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+img {
+  line-height: 0;
+  max-width: 100%;
+}
+
+/* all title css start here */
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  padding: 20px 0;
+  text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+  .page-title {
+    font-size: 2rem;
+  }
+}
+
+/* all title css end here */
+
+/* input css start here */
+input,
+textarea,
+select {
+  font-family: var(--font-main);
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color) !important;
+  outline: none;
+  width: 100%;
+  transition: var(--transition);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--secondary-color) !important;
+}
+
+label {
+  font-family: var(--font-main);
+  font-size: 16px;
+  color: var(--black);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #32330e !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+/* input css end here */
+
+.btn_cv {
+  background: var(--primary-color);
+  color: var(--white) !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: var(--font-main);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn_cv:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 0%;
+  height: 100%;
+  background: var(--secondary-color);
+  transform: skewX(-15deg);
+  z-index: -1;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+
+.btn_cv:hover::after {
+  width: calc(100% + 100px);
+}
+
+.button {
+  width: 150px;
+  height: 47px;
+  background: var(--primary-color);
+  position: relative;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  font-family: var(--font-main);
+  text-transform: capitalize;
+  transition: var(--transition);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  overflow: hidden;
+}
+
+.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.button-wrapper,
+.text,
+.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0;
+}
+
+.text,
+.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover {
+  background: var(--secondary-color);
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover .button-wrapper {
+  top: 0;
+}
+
+.button:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+@media (max-width: 1024px) {
+  .button {
+    width: 140px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    width: 130px;
+    height: 42px;
+  }
+
+  .icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 120px;
+    height: 40px;
+    padding: 8px 15px;
+  }
+
+  .icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.btn:hover {
+  background: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* Click effect */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .btn {
+    height: 48px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    height: 42px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+}
+
+/* all button css end here */
+
+/* Section Gap css Start Here */
+.sec-gap {
+  padding: 80px 0px 20px 0px;
+  transition: var(--transition);
+}
+
+@media screen and (max-width: 992px) {
+  .sec-gap {
+    padding: 70px 0px 20px 0px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sec-gap {
+    padding: 60px 0px 20px 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sec-gap {
+    padding: 50px 0px 20px 0px;
+  }
+}
+/* Section Gap css End Here */
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}

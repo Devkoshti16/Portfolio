@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: left;
+  padding-top: 150px;
+}
+
+/* Hero Text Content */
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-family: "Bubblegum Sans", sans-serif;
+  color: var(--text);
+}
+
+.highlight {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.sub-text {
+  font-size: 18px;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+/* Experience Section */
+.experience {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.experience h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+}
+
+.experience p {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons i {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: white;
+}
+
+/* Hero Image */
+.hero-image img {
+  height: 400px;
+  max-width: 100%;
+}
+
+/* Reviews */
+.reviews {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.stars {
+  font-size: 18px;
+  color: gold;
+}
+
+.rating {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .experience {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .reviews {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-image img {
+    height: 300px;
+  }
+
+  .experience h2 {
+    font-size: 28px;
+  }
+
+  .reviews {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 80px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-image img {
+    height: 250px;
+  }
+
+  .sub-text {
+    font-size: 16px;
+  }
+
+  .experience h2 {
+    font-size: 24px;
+  }
+
+  .reviews {
+    width: 90%;
+  }
+}
