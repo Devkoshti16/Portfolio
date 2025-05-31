@@ -457,7 +457,7 @@ select:-webkit-autofill:focus {
 
 @media screen and (max-width: 480px) {
   .sec-gap {
-    padding: 50px 0px 20px 0px;
+    padding: 70px 0px 0px 0px;
   }
 }
 /* Section Gap css End Here */
