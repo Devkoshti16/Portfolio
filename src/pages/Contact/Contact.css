@@ -82,7 +82,7 @@
   font-weight: 500;
   font-size: 16px;
   color: var(--black);
-  font-family: var(--font-family);
+  font-family: var(--secondary-font);
 }
 
 .contact-info p strong {
@@ -94,7 +94,7 @@
 .contact-info p a {
   color: var(--black);
   text-decoration: none;
-  font-family: var(--font-family);
+  font-family: var(--secondary-font);
   transition: color 0.3s;
 }
 
