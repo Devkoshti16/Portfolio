@@ -9,13 +9,13 @@ function Home() {
         <div className="hero-content">
           <h1>
             Hy! I Am <br />
-            <span className="highlight">John Deo.</span>
+            <span className="highlight">Dev Koshti.</span>
           </h1>
           <p className="sub-text">
             I design beautifully simple things, <br /> and I love what I do.
           </p>
           <div className="experience">
-            <h2>08</h2>
+            <h2>2</h2>
             <p>YEARS EXPERIENCE</p>
           </div>
           <div className="social-icons">

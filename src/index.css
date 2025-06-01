@@ -39,19 +39,18 @@
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 15px;
-  height: 100vh;
 }
 
 body {
   max-width: 2560px;
-  margin: auto !important;
   box-sizing: border-box;
   font-family: var(--secondary-font);
   font-weight: normal;
   position: relative;
-  overflow-x: hidden;
   background-color: var(--body);
   color: var(--text);
+  overflow: hidden;
+  margin: auto !important;
 }
 
 html {
