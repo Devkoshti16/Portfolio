@@ -7,7 +7,8 @@ function Contact() {
   return (
     <section className="sec-gap">
       {/* <h1 className="page-title animate__animated animate__fadeInUp">contact us</h1> */}
-      <div className="contact-container animate__animated animate__fadeIn">
+        <h1 className="page-title animate__animated animate__fadeInUp">contact us</h1>
+      <div className="contact-container animate__animated animate__fadeInUp">
         <div className="contact-image">
           <img src={Placeholderimg} alt="Contact" className="contact-img" />
         </div>

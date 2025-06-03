@@ -14,7 +14,11 @@ function Projects() {
     { id: 1, name: "Project One", description: "Description of project one.", image: project1, link: "https://example.com/project1" },
     { id: 2, name: "Project Two", description: "Description of project two.", image: project2, link: "https://example.com/project2" },
     { id: 3, name: "Project Three", description: "Description of project three.", image: project3, link: "https://example.com/project3" },
-    { id: 4, name: "Project Four", description: "Description of project four.", image: project4, link: "https://example.com/project4" }
+    { id: 4, name: "Project Four", description: "Description of project four.", image: project4, link: "https://example.com/project4" },
+    { id: 5, name: "Project Five", description: "Description of project five.", image: project5, link: "https://example.com/project5" },
+    { id: 6, name: "Project Six", description: "Description of project six.", image: project6, link: "https://example.com/project6" },
+    { id: 7, name: "Project Seven", description: "Description of project seven.", image: project7, link: "https://example.com/project7" },
+    { id: 8, name: "Project Eight", description: "Description of project eight.", image: project8, link: "https://example.com/project8" },
   ];
 
   return (

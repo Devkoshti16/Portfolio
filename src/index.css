@@ -39,7 +39,6 @@
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 15px;
-  height: 100dvh;
 }
 
 body {
@@ -50,7 +49,6 @@ body {
   position: relative;
   background-color: var(--body);
   color: var(--text);
-  overflow: hidden;
   margin: auto !important;
 }
 
@@ -172,13 +170,15 @@ img {
   text-align: center;
   font-size: 2.5rem;
   color: var(--primary-color);
-  padding: 20px 0;
+  padding-bottom: 30px;
   text-transform: capitalize;
+  transition: var(--transition);
 }
 
 @media (max-width: 767px) {
   .page-title {
     font-size: 2rem;
+    padding-bottom: 20px;
   }
 }
 
@@ -438,28 +438,22 @@ select:-webkit-autofill:focus {
 /* all button css end here */
 
 /* Section Gap css Start Here */
-/* .sec-gap {
-  padding: 80px 0px 20px 0px;
+.sec-gap {
+  padding: 30px 0px;
   transition: var(--transition);
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 575px) {
   .sec-gap {
-    padding: 70px 0px 20px 0px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .sec-gap {
-    padding: 60px 0px 20px 0px;
+    padding: 25px 0px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .sec-gap {
-    padding: 70px 0px 0px 0px;
+    padding: 20px 0px;
   }
-} */
+}
 /* Section Gap css End Here */
 
 body::-webkit-scrollbar-thumb {

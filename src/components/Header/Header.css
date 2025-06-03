@@ -18,22 +18,10 @@
 
 .logo img {
   transition: var(--transition);
-  width: 60px;
-}
-
-@media (max-width: 991px) {
-  .logo img {
-    width: 55px;
-  }
+  width: 50px;
 }
 
 @media (max-width: 767px) {
-  .logo img {
-    width: 50px;
-  }
-}
-
-@media (max-width: 575px) {
   .logo img {
     width: 45px;
   }
