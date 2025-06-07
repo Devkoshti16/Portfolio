@@ -2,12 +2,12 @@ import React from "react";
 import "./Contact.css";
 // import Placeholderimg from "../../assets/dummy.png";
 import Placeholderimg from "../../assets/dev.jpg";
+import Title from "../../components/Title/Title";
 
 function Contact() {
   return (
     <section className="sec-gap">
-      {/* <h1 className="page-title animate__animated animate__fadeInUp">contact us</h1> */}
-        <h1 className="page-title animate__animated animate__fadeInUp">contact us</h1>
+      <Title/>
       <div className="contact-container animate__animated animate__fadeInUp">
         <div className="contact-image">
           <img src={Placeholderimg} alt="Contact" className="contact-img" />

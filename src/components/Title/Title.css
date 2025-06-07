@@ -1,0 +1,19 @@
+/* all title css start here */
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  padding-bottom: 30px;
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+
+@media (max-width: 767px) {
+  .page-title {
+    font-size: 2rem;
+    padding-bottom: 20px;
+  }
+}
+
+/* all title css end here */
