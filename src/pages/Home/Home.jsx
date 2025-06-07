@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import heroImage from "../../assets/Hero.png"; // Ensure correct path
+import cvFile from "../../assets/cv.pdf";
 
 function Home() {
   const handleDownload = () => {
