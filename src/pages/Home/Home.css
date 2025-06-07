@@ -132,6 +132,10 @@
     padding-top: 100px;
   }
 
+  .hero-content .button {
+    display: none;
+  }
+
   .hero-content h1 {
     font-size: 36px;
   }
@@ -150,6 +154,11 @@
 }
 
 @media (max-width: 575px) {
+  .hero-content .button {
+    display: block;
+    margin: 20px auto;
+  }
+
   .hero {
     padding-top: 20px;
     padding-bottom: 20px;
