@@ -100,6 +100,10 @@
   font-weight: bold;
 }
 
+.hero-content .button {
+  display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero {
@@ -131,10 +135,6 @@
 @media (max-width: 768px) {
   .hero {
     padding-top: 40px;
-  }
-
-  .hero-content .button {
-    display: none;
   }
 
   .hero-content h1 {
