@@ -9,7 +9,7 @@
   font-family: "Poppins", sans-serif;
   color: white;
   text-align: left;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 /* Hero Text Content */
@@ -158,7 +158,7 @@
   .hero {
     padding-top: 20px;
   }
-  
+
   .hero-content .button {
     display: block;
     margin: 20px auto;
