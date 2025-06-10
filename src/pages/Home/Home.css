@@ -106,6 +106,7 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding-top: 50px;
   }
 
   .hero-content {
@@ -129,7 +130,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 100px;
+    padding-top: 40px;
   }
 
   .hero-content .button {
@@ -154,14 +155,13 @@
 }
 
 @media (max-width: 575px) {
+  .hero {
+    padding-top: 20px;
+  }
+  
   .hero-content .button {
     display: block;
     margin: 20px auto;
-  }
-
-  .hero {
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
 
   .hero-content h1 {
