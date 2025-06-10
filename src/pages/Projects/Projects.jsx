@@ -28,7 +28,9 @@ function Projects() {
         <div className="projects-grid">
           {projectList.map((project) => (
             <a key={project.id} href={project.link} target="_blank" className="project-card animate__animated animate__fadeInUp">
-              <img src={project.image} alt={project.name} className="project-image" />
+              <div className="project-image">
+                <img src={project.image} alt={project.name}/>
+              </div>
               <h2>{project.name}</h2>
               <p>{project.description}</p>
             </a>
