@@ -26,10 +26,15 @@
   border-radius: 8px;
   margin-bottom: 10px;
   object-fit: cover;
+  transition: var(--transition);
 }
 
 .project-card:hover {
   transform: translateY(-10px);
+}
+
+.project-card:hover .project-image{
+  transform: scale(1.05);
 }
 
 .project-card:hover h2 {
