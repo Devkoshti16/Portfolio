@@ -4,7 +4,7 @@ import "./Header.css";
 import "../../App.css";
 import logo from "../../assets/logo.png";
 // import logo from "../../assets/logo.svg";
-import cvFile from "../../assets/cv.pdf";
+import cvFile from "../../assets/Dev-Koshti-Web-Desinger";
 import { useEffect } from "react";
 
 function Header() {
@@ -31,7 +31,7 @@ function Header() {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = cvFile;
-    link.download = "cv.pdf";
+    link.download = "Dev-Koshti-Web-Desinger.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
