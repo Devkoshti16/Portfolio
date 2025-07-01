@@ -17,7 +17,7 @@ function Projects() {
     { id: 3, name: "Smoothick.com", description: "Find all the electronics products you're looking for from top brands", image: project3, link: "https://smoothick.com" },
     { id: 4, name: "Myproseminar.com", description: "Build skills in team communication and other capabilities to increase your employees' wellbeing and health.", image: project4, link: "https://myproseminar.com" },
     { id: 5, name: "Auditoral.com", description: "auditoral.com is best electrical product", image: project5, link: "https://auditoral.com" },
-    { id: 5, name: "lanisana.com", description: "lanisana.com is best electrical product", image: project6, link: "https://lanisana.com" },
+    { id: 6, name: "lanisana.com", description: "lanisana.com is best electrical product", image: project6, link: "https://lanisana.com" },
   ];
 
   return (
