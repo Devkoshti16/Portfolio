@@ -18,6 +18,7 @@
   left: 0;
   right: 0;
   z-index: 100;
+  max-width: 100%;
   background-color: var(--body);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
   padding: 10px 15px;
