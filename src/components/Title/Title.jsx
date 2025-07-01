@@ -19,11 +19,11 @@ function Title() {
           .replace(/\b\w/g, (char) => char.toUpperCase());
 
   return (
-    <div>
+    <>
       <h1 className="page-title animate__animated animate__fadeInUp">
         {formattedTitle}
       </h1>
-    </div>
+    </>
   );
 }
 
