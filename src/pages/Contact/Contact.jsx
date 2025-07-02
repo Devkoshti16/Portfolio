@@ -36,7 +36,7 @@ function Contact() {
           <img src={Placeholderimg} alt="Contact" className="contact-img" />
         </div>
 
-        <div className="contact-form-container">
+        <div className="contact-form-container animate__animated animate__fadeRight">
           <form className="contact-form" onSubmit={handleSubmit}>
             <label>Full Name</label>
             <input
