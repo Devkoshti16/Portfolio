@@ -55,6 +55,7 @@ body {
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-color: var(--body);
 }
 
 html,
