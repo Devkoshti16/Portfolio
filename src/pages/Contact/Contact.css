@@ -44,6 +44,8 @@
   font-size: 16px;
   margin-bottom: 20px;
   color: var(--text);
+  font-family: var(--font-main);
+  font-weight: 500;
 }
 
 .contact-item {
@@ -53,10 +55,22 @@
 .contact-item strong {
   font-size: 18 px;
   color: var(--text);
-  margin-bottom: 6px;
   display: inline-block;
   font-family: var(--font-main);
   text-transform: capitalize;
+}
+
+.contact-label {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  color: var(--text);
+  font-size: 18px;
+  line-height: .5;
 }
 
 .contact-item a,
