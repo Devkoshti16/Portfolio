@@ -39,6 +39,7 @@
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 15px;
+  height: 100dvh;
 }
 
 body {
@@ -50,6 +51,7 @@ body {
   background-color: var(--body);
   color: var(--text);
   margin: auto !important;
+  height: 100dvh;
 }
 
 html {
