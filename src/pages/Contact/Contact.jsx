@@ -77,14 +77,8 @@ function Contact() {
             <p>
               <strong>Address</strong>
               <br />
-              <address>Plot no 123, New Delhi, India</address>
+              <p>Plot no 91, Shanti Nagar, Udhna, Surat-394210</p>
             </p>
-          </div>
-
-          <div className="social-icons">
-            <i className="fab fa-facebook"></i>
-            <i className="fab fa-instagram"></i>
-            <i className="fab fa-twitter"></i>
           </div>
         </div>
       </div>

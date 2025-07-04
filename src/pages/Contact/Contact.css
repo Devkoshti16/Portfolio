@@ -5,8 +5,7 @@
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  height: calc(100vh - 100px);
-  overflow-y: auto;
+  height: 100vh;
 }
 
 .contact-image {
@@ -86,9 +85,12 @@
 }
 
 .contact-info p strong {
-  font-family: 20px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--primary-color);
+  padding-bottom: 8px;
+  line-height: 1;
+  display: inline-block;
 }
 
 .contact-info p a {
@@ -99,7 +101,7 @@
 }
 
 .contact-info p a:hover {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .social-icons {
