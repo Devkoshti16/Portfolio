@@ -53,11 +53,6 @@ function Home() {
               </span>
             </div>
           </a>
-          <div className="social-icons">
-            <i className="fab fa-facebook"></i>
-            <i className="fab fa-twitter"></i>
-            <i className="fab fa-linkedin"></i>
-          </div>
         </div>
 
         <div className="hero-image">
