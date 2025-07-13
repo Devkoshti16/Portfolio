@@ -22,6 +22,24 @@
   background-color: var(--body);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
   padding: 10px 15px;
+} */
+
+/* 
+.header.fixed-menu {
+  position: fixed;
+  top: -200px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  max-width: 100%;
+  background-color: var(--body);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+  padding: 10px 15px;
+  transition: .5s all ease-in-out;
+}
+
+.header.fixed-menu.fixed-top {
+  top: 0px;
 }
 
 /* Logo */
