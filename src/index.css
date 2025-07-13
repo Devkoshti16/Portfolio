@@ -18,7 +18,7 @@
   --text: #0d2f3f;
   --body: #f8f7f1;
   --font-main: "Poppins", sans-serif;
-  -transition: 0.5s all ease-in-out;
+  --transition: 0.5s all ease-in-out;
 }
 
 @media (prefers-color-scheme: light) {
