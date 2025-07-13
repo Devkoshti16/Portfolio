@@ -13,9 +13,14 @@ function Header() {
 
     const handleScroll = () => {
       if (window.scrollY > 100) {
-        header.classList.add("sticky");
+        header.classList.add("fixed-menu");
       } else {
-        header.classList.remove("sticky");
+        header.classList.remove("fixed-menu");
+      }
+      if (window.scrollY > 150) {
+        header.classList.add("fixed-top");
+      } else {
+        header.classList.remove("fixed-top");
       }
     };
 
