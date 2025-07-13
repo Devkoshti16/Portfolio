@@ -9,24 +9,19 @@
   z-index: 99;
   max-width: 1120px;
   background-color: var(--body);
-  transition: .5s all ease-in-out;
+  transition: var(--transition);
 }
 
-.header.fixed-menu {
+.header.sticky {
   position: fixed;
-  top: -200px;
+  top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 100;
   max-width: 100%;
   background-color: var(--body);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
   padding: 10px 15px;
-  transition: .5s all ease-in-out;
-}
-
-.header.fixed-top {
-  top: 0px;
 }
 
 /* Logo */
