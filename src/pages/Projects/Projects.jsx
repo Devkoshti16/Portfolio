@@ -28,15 +28,24 @@ function Projects() {
         <Title/>
         <div className="projects-grid">
           {projectList.map((project) => (
-            <a key={project.id} href={project.link} target="_blank" className="project-card animate__animated animate__fadeInUp">
+            <div key={project.id} className="project-card">
               <div className="project-image">
-                <img src={project.image} alt={project.name}/>
+                <img src={project.image} alt={project.name} />
+                <div className="project-overlay">
+                  <h2>{project.name}</h2>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    Visit Site
+                  </a>
+                </div>
               </div>
-              <h2>{project.name}</h2>
-              <p>{project.description}</p>
-            </a>
+              <div className="project-content">
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+              </div>
+            </div>
           ))}
         </div>
+
       </div>
     </section>
   );
