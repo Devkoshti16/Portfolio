@@ -51,6 +51,7 @@ body {
   background-color: var(--body);
   color: var(--text);
   margin: auto !important;
+  height: 100%;
 }
 
 html {
