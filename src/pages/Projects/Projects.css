@@ -28,23 +28,9 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   opacity: 0;
   transform: translateY(40px);
-  animation: fadeUp 0.6s ease forwards;
-}
-
-.project-card:nth-child(1) { animation-delay: 0.2s; }
-.project-card:nth-child(2) { animation-delay: 0.4s; }
-.project-card:nth-child(3) { animation-delay: 0.6s; }
-.project-card:nth-child(4) { animation-delay: 0.8s; }
-.project-card:nth-child(5) { animation-delay: 1s; }
-.project-card:nth-child(6) { animation-delay: 1.2s; }
-.project-card:nth-child(7) { animation-delay: 1.4s; }
-.project-card:nth-child(8) { animation-delay: 1.6s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: card-fade-in 1s linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .project-card:hover {
@@ -74,7 +60,7 @@
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   opacity: 0;
   display: flex;
   flex-direction: column;

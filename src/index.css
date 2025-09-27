@@ -39,7 +39,6 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
-  height: 100%;
 }
 
 body {
@@ -453,3 +452,17 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-color);
 }
+
+
+/* ANIMATION CSS START HERE */
+@keyframes card-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ANIMATION CSS START HERE */
