@@ -52,6 +52,7 @@ body {
   color: var(--text);
   margin: auto !important;
   background-color: var(--body);
+  height: 100vh;
 }
 
 html {
