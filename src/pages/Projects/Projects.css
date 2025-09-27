@@ -113,3 +113,9 @@
   color: #555;
   line-height: 1.4;
 }
+
+@media (max-width: 767px) {
+  .projects-container {
+    padding: 0rem 1rem;
+  }
+}

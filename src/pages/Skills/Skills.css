@@ -143,6 +143,7 @@
   .skill-card {
     width: 95%;
     padding: 1.5rem;
+    animation-range: entry 0% cover 10%;
   }
   
   .circle-progress {
