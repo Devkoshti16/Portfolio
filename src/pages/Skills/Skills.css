@@ -27,7 +27,7 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   animation: card-fade-in 1s linear both;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 30%;
 }
 
 .skill-card:hover {
