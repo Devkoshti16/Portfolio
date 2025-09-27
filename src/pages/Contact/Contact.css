@@ -132,7 +132,7 @@
     width: 500px;
     height: 500px;
   }
-  
+
   .contact-left::before {
     width: 500px;
     height: 500px;
@@ -145,17 +145,21 @@
 }
 
 @media (max-width: 575px) {
-  .contact-left img{
+  .contact-section {
+    margin-bottom: 15px;
+  }
+
+  .contact-left img {
     width: 300px;
     height: 300px;
   }
-  
+
   .contact-left::before {
     width: 300px;
     height: 300px;
     left: 10px;
   }
-  
+
   .contact-right p {
     font-size: 16px;
   }
@@ -165,5 +169,4 @@
   .contact-left::before {
     display: none;
   }
-  
 }
