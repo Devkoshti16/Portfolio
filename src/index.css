@@ -39,6 +39,8 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
+  background-color: var(--body);
+  height: 100%;
 }
 
 body {
@@ -47,10 +49,8 @@ body {
   font-family: var(--secondary-font);
   font-weight: normal;
   position: relative;
-  background-color: var(--body);
   color: var(--text);
   margin: auto !important;
-  height: 100%;
 }
 
 html {
