@@ -111,6 +111,11 @@
 
 /* Responsive */
 @media (max-width: 900px) {
+  .contact-section{
+    padding: 80px 20px;
+    margin-bottom: 30px;
+  }
+
   .contact-container {
     grid-template-columns: 1fr;
     text-align: center;
@@ -146,6 +151,7 @@
 
 @media (max-width: 575px) {
   .contact-section {
+    padding: 40px 15px;
     margin-bottom: 15px;
   }
 
