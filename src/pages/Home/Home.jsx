@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import heroImage from "../../assets/Hero.png"; // Ensure correct path
+import heroImage from "../../assets/dev.jpg"; // Ensure correct path
 import cvFile from "../../assets/cv.pdf";
 
 function Home() {
@@ -44,9 +44,9 @@ function Home() {
           </a>
         </div>
 
-        {/* <div className="hero-image">
+        <div className="hero-image">
           <img src={heroImage} alt="John Deo" />
-        </div> */}
+        </div>
 
         <div className="reviews">
           <p>12k Reviews On</p>

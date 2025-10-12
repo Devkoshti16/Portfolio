@@ -73,8 +73,15 @@
 }
 
 /* Hero Image */
+.hero-image{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .hero-image img {
-  height: 400px;
   max-width: 100%;
 }
 
@@ -141,8 +148,9 @@
     font-size: 36px;
   }
 
-  .hero-image img {
+  .hero-image {
     height: 300px;
+    width: 300px;
   }
 
   .experience h2 {
@@ -168,8 +176,9 @@
     font-size: 46px;
   }
 
-  .hero-image img {
+  .hero-image {
     height: 250px;
+    width: 250px;
     margin-bottom: 50px;
   }
 
