@@ -49,7 +49,7 @@ function Skills() {
         <div className="skills-grid">
           {skills.map((skill, i) => (
             <div
-              className="skill-card fade-up"
+              className="skill-card animate__animated animate__fadeInUp"
               key={skill.id}
               style={{ animationDelay: `${i * 0.15}s` }}
             >

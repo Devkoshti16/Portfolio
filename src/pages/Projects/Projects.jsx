@@ -28,7 +28,7 @@ function Projects() {
         <Title/>
         <div className="projects-grid">
           {projectList.map((project) => (
-            <div key={project.id} className="project-card">
+            <div key={project.id} className="project-card animate__animated animate__fadeInUp">
               <div className="project-image">
                 <img src={project.image} alt={project.name} />
                 <div className="project-overlay">
