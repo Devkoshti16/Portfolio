@@ -44,9 +44,9 @@ function Home() {
           </a>
         </div>
 
-        <div className="hero-image">
+        {/* <div className="hero-image">
           <img src={heroImage} alt="John Deo" />
-        </div>
+        </div> */}
 
         <div className="reviews">
           <p>12k Reviews On</p>
