@@ -32,9 +32,6 @@ function Home() {
                 <span className="rotating-text-item" style={{ "--color1": "#ff6a00", "--color2": "#ee0979" }}>
                   Frontend Developer
                 </span>
-                <span className="rotating-text-item" style={{ "--color1": "#38ef7d", "--color2": "#11998e" }}>
-                  UI/UX Enthusiast
-                </span>
                 <span className="rotating-text-item" style={{ "--color1": "#00bcd4", "--color2": "#8e2de2" }}>
                   Web Designer
                 </span>
@@ -58,17 +55,17 @@ function Home() {
           </div>
 
           <div className="social-icons">
-            <a href="https://github.com/your-username" target="_blank" rel="noreferrer">
+            <a href="https://github.com/Devkoshti16" target="_blank" rel="noreferrer">
               <i className="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com/in/your-username" target="_blank" rel="noreferrer">
+            <a href="www.linkedin.com/in/dev-koshti" target="_blank" rel="noreferrer">
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="https://instagram.com/your-username" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/devkoshti_" target="_blank" rel="noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="mailto:youremail@example.com">
-              <i className="fas fa-paper-plane"></i>
+            <a href="mailto:devkoshti16@gamil.com">
+              <i class="fas fa-envelope"></i>
             </a>
           </div>
         </div>
