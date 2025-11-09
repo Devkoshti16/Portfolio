@@ -10,27 +10,48 @@
   box-sizing: border-box;
 }
 
+/* |-----------------------------------------------------------
+| 🌟 NEW DARK THEME VARIABLES 🌟
+|-----------------------------------------------------------
+| These replace the original light theme variables.
+*/
 :root {
-  --primary-color: #286f6c;
-  --secondary-color: #edb33c;
+  --primary-glow: #8e2de2; /* Primary glow color (Purple) */
+  --secondary-glow: #00bcd4; /* Secondary glow color (Cyan) */
+  --bg-dark: #0a0a0c; /* Main background color */
+  --card-dark: #121215; /* Card/Container background color */
+  
   --white: #ffffff;
-  --black: #000000;
-  --text: #0d2f3f;
-  --body: #f8f7f1;
+  --text-light: #e0e0e0; /* Main text color */
+  --text-muted: #888; /* Secondary text color */
+  --border-dark: #222; /* Border color for separation */
+  
+  --black: #000000; /* Keeping black for safety */
+  
   --font-main: "Poppins", sans-serif;
   --transition: 0.5s all ease-in-out;
+  
+  /* Mapping old variables to new dark theme for compatibility */
+  --primary-color: var(--primary-glow); 
+  --secondary-color: var(--secondary-glow);
+  --text: var(--text-light);
+  --body: var(--bg-dark);
 }
 
 @media (prefers-color-scheme: light) {
+  /* You can safely remove this entire block or map it to a pure light theme
+     if you plan to support both. For a consistent dark theme, the default
+     :root block above is what matters. */
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    /* Keeping the dark theme for consistency */
+    color: var(--text-light);
+    background-color: var(--bg-dark);
   }
   a:hover {
-    color: #747bff;
+    color: var(--primary-glow);
   }
   button {
-    background-color: #f9f9f9;
+    background-color: var(--card-dark);
   }
 }
 
@@ -45,7 +66,7 @@
 body {
   max-width: 2560px;
   box-sizing: border-box;
-  font-family: var(--secondary-font);
+  font-family: var(--font-main); /* Corrected variable name to --font-main */
   font-weight: normal;
   position: relative;
   color: var(--text);
@@ -174,8 +195,10 @@ select {
   font-family: var(--font-main);
   font-size: 16px;
   padding: 10px;
-  border-radius: 5px;
-  border: 1px solid var(--primary-color) !important;
+  border-radius: 8px; /* Slightly larger radius for modern look */
+  border: 1px solid var(--border-dark) !important; /* Dark theme border */
+  background-color: var(--bg-dark); /* Dark theme background */
+  color: var(--text-light); /* Dark theme text */
   outline: none;
   width: 100%;
   transition: var(--transition);
@@ -184,15 +207,16 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: var(--secondary-color) !important;
+  border-color: var(--primary-glow) !important; /* Focus glow color */
 }
 
 label {
   font-family: var(--font-main);
   font-size: 16px;
-  color: var(--black);
+  color: var(--text-light); /* Dark theme label color */
 }
 
+/* Updated autofill styles for dark theme visibility */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -202,244 +226,147 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #32330e !important;
-  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset !important;
-  background-color: rgba(0, 0, 0, 0) !important;
+  -webkit-text-fill-color: var(--text-light) !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-dark) inset !important; /* Use dark theme BG */
+  background-color: var(--bg-dark) !important; 
   -webkit-transition: background-color 5000s ease-in-out 0s !important;
   transition: background-color 5000s ease-in-out 0s !important;
 }
 /* input css end here */
 
-.btn_cv {
-  background: var(--primary-color);
-  color: var(--white) !important;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 500;
-  font-family: var(--font-main);
+
+/* |-----------------------------------------------------------
+| 🌟 BUTTONS - UNIFIED STYLING (Gradient Shine) 🌟
+|-----------------------------------------------------------
+| Applies the consistent gradient/shine effect to all general button classes.
+*/
+
+.btn_cv,
+.button,
+.btn {
+  /* Base styles */
   position: relative;
-  z-index: 2;
+  z-index: 1;
   overflow: hidden;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.btn_cv:after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 0%;
-  height: 100%;
-  background: var(--secondary-color);
-  transform: skewX(-15deg);
-  z-index: -1;
-  border-radius: 5px;
-  transition: var(--transition);
-}
-
-.btn_cv:hover::after {
-  width: calc(100% + 100px);
-}
-
-.button {
-  width: 150px;
-  height: 47px;
-  background: var(--primary-color);
-  position: relative;
-  padding: 10px 20px;
-  text-align: center;
-  border-radius: 5px;
-  font-family: var(--font-main);
-  text-transform: capitalize;
-  transition: var(--transition);
   cursor: pointer;
   outline: none;
   border: none;
-  overflow: hidden;
+  
+  /* Text and Shape */
+  color: var(--white) !important;
+  padding: 10px 20px;
+  border-radius: 8px; /* Consistent radius */
+  font-weight: 600;
+  font-family: var(--font-main);
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.3s ease;
+
+  /* Gradient Background */
+  background: linear-gradient(90deg, var(--secondary-glow), var(--primary-glow)) !important;
+  
+  /* Flexbox for alignment (Used by .btn, but safe here) */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.button::before {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s;
+/* Gradient Shine Effect */
+.btn_cv::after,
+.button::before, /* .button was using a 'before' for its old animation, so we reuse it */
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.6s;
+  z-index: -1;
 }
 
+.btn_cv:hover::after,
+.button:hover::before,
+.btn:hover::after {
+  left: 100%;
+}
+
+.btn_cv:hover,
+.button:hover,
+.btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(142, 45, 226, 0.6);
+}
+
+/* --- Specific Overrides for .button to handle icon logic --- */
+
+/* Reset complex icon/text logic for a unified button experience */
 .button-wrapper,
 .text,
 .icon {
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  color: #fff;
+  position: relative;
+  overflow: visible;
+  width: auto;
+  height: auto;
+  top: auto;
+  left: auto;
+  transition: none;
 }
 
-.text {
-  top: 0;
+.button .text {
+  top: auto;
 }
-
-.text,
-.icon {
-  transition: top 0.5s;
-}
-
-.icon {
-  color: #fff;
-  top: 100%;
-  display: flex;
+.button .icon {
+  top: auto;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-
-.icon svg {
+.button .icon svg {
   width: 24px;
   height: 24px;
 }
 
-.button:hover {
-  background: var(--secondary-color);
-}
-
-.button:hover .text {
-  top: -100%;
-}
-
+/* Remove the old complex hover logic from .button */
+.button:hover .text,
 .button:hover .icon {
-  top: 0;
-}
-
-.button:hover .button-wrapper {
-  top: 0;
-}
-
-.button:hover:before {
+  top: auto;
   opacity: 1;
-  visibility: visible;
-}
-
-.button:hover:before {
-  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
-}
-
-@media (max-width: 1024px) {
-  .button {
-    width: 140px;
-    height: 45px;
-    font-size: 14px;
-  }
-
-  .icon svg {
-    width: 22px;
-    height: 22px;
-  }
-}
-
-@media (max-width: 768px) {
-  .button {
-    width: 130px;
-    height: 42px;
-  }
-
-  .icon svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .button {
-    width: 120px;
-    height: 40px;
-    padding: 8px 15px;
-  }
-
-  .icon svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-.btn {
-  width: 100%;
-  height: 50px;
-  background: var(--primary-color) !important;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-family: var(--font-main);
-  text-transform: uppercase;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Hover effect */
-.btn:hover {
-  background: var(--secondary-color) !important;
-}
-
-/* Click effect */
-.btn:active {
-  transform: scale(0.98);
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 1024px) {
-  .btn {
-    height: 48px;
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .btn {
-    height: 45px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .btn {
-    height: 42px;
-    font-size: 13px;
-    border-radius: 6px;
-  }
 }
 
 /* all button css end here */
 
+
 /* Section Gap css Start Here */
 .sec-gap {
-  padding: 30px 0px;
+  padding: 100px 0px; /* Increased padding for modern spacing */
   transition: var(--transition);
+}
+
+@media screen and (max-width: 900px) {
+  .sec-gap {
+    padding: 70px 0px;
+  }
 }
 
 @media screen and (max-width: 575px) {
   .sec-gap {
-    padding: 25px 0px;
+    padding: 50px 0px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .sec-gap {
-    padding: 20px 0px;
-  }
-}
 /* Section Gap css End Here */
 
+/* Scrollbar Colors */
 body::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
+  background: var(--primary-glow); /* Scrollbar thumb color */
   border-radius: 10px;
 }
 
@@ -448,11 +375,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--white);
+  background: var(--card-dark); /* Scrollbar track color */
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-color);
+  background: var(--secondary-glow); /* Scrollbar thumb hover color */
 }
 
 
@@ -467,4 +394,4 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translateY(0);
   }
 }
-/* ANIMATION CSS START HERE */
+/* ANIMATION CSS END HERE */

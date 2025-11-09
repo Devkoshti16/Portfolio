@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Preloader.css";
 
 const Preloader = () => {
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setFadeOut(true), 1800); // Loader time
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div id="preloader">
+    <div id="preloader" className={fadeOut ? "fade-out" : ""}>
       <div className="loader">
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
-        <div className="bar4"></div>
-        <div className="bar5"></div>
-        <div className="bar6"></div>
-        <div className="bar7"></div>
-        <div className="bar8"></div>
-        <div className="bar9"></div>
-        <div className="bar10"></div>
-        <div className="bar11"></div>
-        <div className="bar12"></div>
+        <div className="orbit">
+          <div className="planet"></div>
+        </div>
+        <h2 className="loader-text">Dev Koshti</h2>
+        <p className="loader-sub">Crafting Digital Experiences</p>
       </div>
     </div>
   );

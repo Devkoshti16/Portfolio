@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom"; // Import NavLink
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
-import "../../App.css";
+// You should have defined your theme variables in App.css or similar file
+// The font family should be defined there.
+import "../../App.css"; 
 import logo from "../../assets/logo.png";
 // import logo from "../../assets/logo.svg";
-import cvFile from "../../assets/cv.pdf";
-import { useEffect } from "react";
 
 function Header() {
   useEffect(() => {
@@ -13,34 +13,19 @@ function Header() {
 
     const handleScroll = () => {
       if (window.scrollY > 100) {
-        header.classList.add("fixed-menu");
+        header.classList.add("sticky");
       } else {
-        header.classList.remove("fixed-menu");
-      }
-      if (window.scrollY > 130) {
-        header.classList.add("fixed-top");
-      } else {
-        header.classList.remove("fixed-top");
+        header.classList.remove("sticky");
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = cvFile;
-    link.download = "cv.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <header className="header">
@@ -73,37 +58,15 @@ function Header() {
           className="nav-item"
           onClick={() => setMenuOpen(false)}
         >
-          {" "}
           Contact
         </NavLink>
       </nav>
 
       <div className="btn-flex">
-        <a onClick={handleDownload} className="button">
-          <div className="button-wrapper">
-            <div className="text">Download CV</div>
-            <span className="icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="2em"
-                height="2em"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                ></path>
-              </svg>
-            </span>
-          </div>
-        </a>
+        {/* --- Updated CTA Button with Class for Gradient Shine --- */}
+        <NavLink to="/contact" className="contact-btn-header primary-btn-header">
+          Contact Me
+        </NavLink>
 
         {/* Mobile Menu Button */}
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
