@@ -1,15 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
-
 
 .hero-section {
   background: radial-gradient(circle at top left, #0f0f0f, #050505);
   color: #fff;
-  font-family: "Poppins", sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 5% 60px;
+  padding: 100px 0px 60px;
   position: relative;
   overflow: hidden;
 }

@@ -1,14 +1,6 @@
 /* --- Base Section --- */
 .contact {
-  background: var(--bg-dark);
-  color: var(--text-light);
-  font-family: "Poppins", sans-serif;
-  padding: 100px 20px;
-}
-
-.contact .container {
-  max-width: 1100px;
-  margin: 0 auto;
+  padding-block: 100px;
 }
 
 .contact-wrapper {
