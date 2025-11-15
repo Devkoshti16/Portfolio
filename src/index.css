@@ -10,40 +10,30 @@
   box-sizing: border-box;
 }
 
-/* |-----------------------------------------------------------
-| 🌟 NEW DARK THEME VARIABLES 🌟
-|-----------------------------------------------------------
-| These replace the original light theme variables.
-*/
 :root {
-  --primary-glow: #8e2de2; /* Primary glow color (Purple) */
-  --secondary-glow: #00bcd4; /* Secondary glow color (Cyan) */
-  --bg-dark: #0a0a0c; /* Main background color */
-  --card-dark: #121215; /* Card/Container background color */
-  
+  --primary-glow: #8e2de2;
+  --secondary-glow: #00bcd4;
+  --bg-dark: #0a0a0c;
+  --card-dark: #121215;
+
   --white: #ffffff;
-  --text-light: #e0e0e0; /* Main text color */
-  --text-muted: #888; /* Secondary text color */
-  --border-dark: #222; /* Border color for separation */
-  
-  --black: #000000; /* Keeping black for safety */
-  
+  --text-light: #e0e0e0;
+  --text-muted: #888;
+  --border-dark: #222;
+  --sub-text: #bbb;
+  --black: #000000;
+
   --font-main: "Poppins", sans-serif;
   --transition: 0.5s all ease-in-out;
-  
-  /* Mapping old variables to new dark theme for compatibility */
-  --primary-color: var(--primary-glow); 
+
+  --primary-color: var(--primary-glow);
   --secondary-color: var(--secondary-glow);
   --text: var(--text-light);
   --body: var(--bg-dark);
 }
 
-@media (prefers-color-scheme: light) {
-  /* You can safely remove this entire block or map it to a pure light theme
-     if you plan to support both. For a consistent dark theme, the default
-     :root block above is what matters. */
+/* @media (prefers-color-scheme: light) {
   :root {
-    /* Keeping the dark theme for consistency */
     color: var(--text-light);
     background-color: var(--bg-dark);
   }
@@ -53,7 +43,7 @@
   button {
     background-color: var(--card-dark);
   }
-}
+} */
 
 #root {
   width: 100%;
@@ -66,7 +56,7 @@
 body {
   max-width: 2560px;
   box-sizing: border-box;
-  font-family: var(--font-main); /* Corrected variable name to --font-main */
+  font-family: var(--font-main);
   font-weight: normal;
   position: relative;
   color: var(--text);
@@ -188,17 +178,17 @@ img {
   max-width: 100%;
 }
 
-/* input css start here */
+/********* input css start here *********/
 input,
 textarea,
 select {
   font-family: var(--font-main);
   font-size: 16px;
   padding: 10px;
-  border-radius: 8px; /* Slightly larger radius for modern look */
-  border: 1px solid var(--border-dark) !important; /* Dark theme border */
-  background-color: var(--bg-dark); /* Dark theme background */
-  color: var(--text-light); /* Dark theme text */
+  border-radius: 8px;
+  border: 1px solid var(--border-dark) !important;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
   outline: none;
   width: 100%;
   transition: var(--transition);
@@ -213,10 +203,9 @@ select:focus {
 label {
   font-family: var(--font-main);
   font-size: 16px;
-  color: var(--text-light); /* Dark theme label color */
+  color: var(--text-light);
 }
 
-/* Updated autofill styles for dark theme visibility */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -228,53 +217,44 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--text-light) !important;
   -webkit-box-shadow: 0 0 0px 1000px var(--bg-dark) inset !important; /* Use dark theme BG */
-  background-color: var(--bg-dark) !important; 
+  background-color: var(--bg-dark) !important;
   -webkit-transition: background-color 5000s ease-in-out 0s !important;
   transition: background-color 5000s ease-in-out 0s !important;
 }
-/* input css end here */
+/********* input css end here *********/
 
-
-/* |-----------------------------------------------------------
-| 🌟 BUTTONS - UNIFIED STYLING (Gradient Shine) 🌟
-|-----------------------------------------------------------
-| Applies the consistent gradient/shine effect to all general button classes.
-*/
-
+/********* all button css start here *********/
 .btn_cv,
 .button,
 .btn {
-  /* Base styles */
   position: relative;
   z-index: 1;
   overflow: hidden;
   cursor: pointer;
   outline: none;
   border: none;
-  
-  /* Text and Shape */
   color: var(--white) !important;
   padding: 10px 20px;
-  border-radius: 8px; /* Consistent radius */
+  border-radius: 8px;
   font-weight: 600;
   font-family: var(--font-main);
   text-decoration: none;
   text-transform: capitalize;
   transition: 0.3s ease;
 
-  /* Gradient Background */
-  background: linear-gradient(90deg, var(--secondary-glow), var(--primary-glow)) !important;
-  
-  /* Flexbox for alignment (Used by .btn, but safe here) */
+  background: linear-gradient(
+    90deg,
+    var(--secondary-glow),
+    var(--primary-glow)
+  ) !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 }
 
-/* Gradient Shine Effect */
 .btn_cv::after,
-.button::before, /* .button was using a 'before' for its old animation, so we reuse it */
+.button::before,
 .btn::after {
   content: "";
   position: absolute;
@@ -305,9 +285,6 @@ select:-webkit-autofill:focus {
   box-shadow: 0 0 20px rgba(142, 45, 226, 0.6);
 }
 
-/* --- Specific Overrides for .button to handle icon logic --- */
-
-/* Reset complex icon/text logic for a unified button experience */
 .button-wrapper,
 .text,
 .icon {
@@ -334,19 +311,17 @@ select:-webkit-autofill:focus {
   height: 24px;
 }
 
-/* Remove the old complex hover logic from .button */
 .button:hover .text,
 .button:hover .icon {
   top: auto;
   opacity: 1;
 }
 
-/* all button css end here */
+/********* all button css end here *********/
 
-
-/* Section Gap css Start Here */
+/********* Section Gap css Start Here *********/
 .sec-gap {
-  padding: 100px 0px; /* Increased padding for modern spacing */
+  padding: 100px 0px;
   transition: var(--transition);
 }
 
@@ -362,11 +337,11 @@ select:-webkit-autofill:focus {
   }
 }
 
-/* Section Gap css End Here */
+/********* Section Gap css End Here *********/
 
-/* Scrollbar Colors */
+/********* Scrollbar Colors *********/
 body::-webkit-scrollbar-thumb {
-  background: var(--primary-glow); /* Scrollbar thumb color */
+  background: var(--primary-glow);
   border-radius: 10px;
 }
 
@@ -375,15 +350,14 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--card-dark); /* Scrollbar track color */
+  background: var(--card-dark);
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-glow); /* Scrollbar thumb hover color */
+  background: var(--secondary-glow);
 }
 
-
-/* ANIMATION CSS START HERE */
+/********* ANIMATION CSS START HERE *********/
 @keyframes card-fade-in {
   from {
     opacity: 0;
@@ -394,4 +368,4 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translateY(0);
   }
 }
-/* ANIMATION CSS END HERE */
+/********* ANIMATION CSS END HERE *********/

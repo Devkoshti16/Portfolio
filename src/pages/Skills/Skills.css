@@ -1,11 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .skills-section {
-  background: #000;
-  color: #fff;
-  padding: 100px 5%;
   text-align: center;
-  font-family: "Poppins", sans-serif;
 }
 
 .skills-wrapper {
@@ -14,8 +10,7 @@
 }
 
 .skills-sub {
-  color: #bbb;
-  margin-top: 10px;
+  color: var(--sub-text);
   margin-bottom: 50px;
   font-size: 1rem;
 }
@@ -28,7 +23,7 @@
 }
 
 .skill-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(247, 247, 247, 10%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 2rem 1.5rem;
