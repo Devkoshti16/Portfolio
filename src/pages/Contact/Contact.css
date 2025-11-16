@@ -26,8 +26,8 @@
 }
 
 .contact-info-group {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
   gap: 1.5rem;
 }
 
@@ -130,7 +130,11 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(90deg, var(--secondary-glow), var(--primary-glow));
+  background: linear-gradient(
+    90deg,
+    var(--secondary-glow),
+    var(--primary-glow)
+  );
   color: white;
   position: relative;
   overflow: hidden;
@@ -175,7 +179,7 @@
   }
 
   .contact-info-group {
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   .contact-info-card {
@@ -245,5 +249,16 @@
   .submit-btn {
     padding: 10px 16px;
     font-size: 0.9rem;
+  }
+
+  .contact-info-group {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contact-info-card {
+    flex: 1 1 100%;
+    max-width: none;
+    gap: 1rem;
   }
 }

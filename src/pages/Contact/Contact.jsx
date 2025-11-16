@@ -68,13 +68,13 @@ function Contact() {
                 </div>
               </a>
 
-              <div className="contact-info-card">
+              <a href="https://maps.app.goo.gl/YZ6MG6ZYYBUFyUL7A" className="contact-info-card">
                 <i className="fas fa-map-marker-alt"></i>
                 <div className="info-text">
                   <h4>Location</h4>
                   <span>Surat, Gujarat, India</span>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
