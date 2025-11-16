@@ -59,7 +59,7 @@
 }
 
 .rotating-text-container {
-  animation: slide-up 6s infinite ease-in-out;
+  animation: slide-up 10s infinite ease-in-out;
 }
 
 .rotating-text-item {
