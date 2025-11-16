@@ -22,8 +22,7 @@ function Contact() {
       `*Name:* ${name}\n` +
       `*Email:* ${email}\n` +
       `*Subject:* ${subject}\n` +
-      `*Message:*\n${message}\n\n` +
-      `(Sent from your portfolio contact form.)`;
+      `*Message:*\n${message}\n\n`;
 
     const encoded = encodeURIComponent(whatsappMessage);
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
@@ -136,4 +135,3 @@ function Contact() {
 }
 
 export default Contact;
-  
