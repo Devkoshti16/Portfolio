@@ -32,9 +32,6 @@ function Home() {
                 <span className="rotating-text-item" style={{ "--color1": "#ff6a00", "--color2": "#ee0979" }}>
                   Frontend Developer
                 </span>
-                <span className="rotating-text-item" style={{ "--color1": "#00bcd4", "--color2": "#8e2de2" }}>
-                  Web Designer
-                </span>
               </div>
             </div>
           </h2>
