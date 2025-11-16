@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
-import Title from "../../components/Title/Title"; // Assuming Title component exists
+import Title from "../../components/Title/Title";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-function Contact() {
+const WHATSAPP_NUMBER = "917698972036";
 
-  // Handle form submission
+function Contact() {
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here (e.g., Formspree, Netlify forms)
-    alert("Form submitted! (This is a placeholder)");
-    e.target.reset();
+
+    const form = e.target;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+
+    const whatsappMessage =
+      `*New Inquiry*\n` +
+      `*Name:* ${name}\n` +
+      `*Email:* ${email}\n` +
+      `*Subject:* ${subject}\n` +
+      `*Message:*\n${message}\n\n` +
+      `(Sent from your portfolio contact form.)`;
+
+    const encoded = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+    setSubmissionStatus("success");
+    form.reset();
+
+    setTimeout(() => setSubmissionStatus(null), 4000);
   };
 
   return (
@@ -19,7 +42,6 @@ function Contact() {
         <Title title="Get in Touch" subtitle="Let's Collaborate" />
 
         <div className="contact-wrapper">
-          {/* --- Left Side: Info --- */}
           <div className="contact-left">
             <h3>Let's build something great together.</h3>
             <p>
@@ -28,8 +50,10 @@ function Contact() {
             </p>
 
             <div className="contact-info-group">
-              {/* Email Card */}
-              <a href="mailto:devkoshti16@gmail.com" className="contact-info-card">
+              <a
+                href="mailto:devkoshti16@gmail.com"
+                className="contact-info-card"
+              >
                 <i className="fas fa-envelope"></i>
                 <div className="info-text">
                   <h4>Email Me</h4>
@@ -37,7 +61,6 @@ function Contact() {
                 </div>
               </a>
 
-              {/* Phone Card */}
               <a href="tel:+917698972036" className="contact-info-card">
                 <i className="fas fa-phone"></i>
                 <div className="info-text">
@@ -46,7 +69,6 @@ function Contact() {
                 </div>
               </a>
 
-              {/* Location Card (Not clickable) */}
               <div className="contact-info-card">
                 <i className="fas fa-map-marker-alt"></i>
                 <div className="info-text">
@@ -57,20 +79,34 @@ function Contact() {
             </div>
           </div>
 
-          {/* --- Right Side: Form --- */}
           <div className="contact-right">
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group-split">
                 <div className="form-group">
-                  <input type="text" name="name" placeholder="Your Name" required />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                  />
                 </div>
                 <div className="form-group">
-                  <input type="email" name="email" placeholder="Your Email" required />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
                 </div>
               </div>
 
               <div className="form-group">
-                <input type="text" name="subject" placeholder="Subject" required />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
               </div>
 
               <div className="form-group">
@@ -81,6 +117,12 @@ function Contact() {
                   required
                 ></textarea>
               </div>
+
+              {submissionStatus === "success" && (
+                <p className="success-message">
+                  Message sent! Redirecting to WhatsApp…
+                </p>
+              )}
 
               <button type="submit" className="submit-btn">
                 Send Message <i className="fas fa-paper-plane"></i>
@@ -94,3 +136,4 @@ function Contact() {
 }
 
 export default Contact;
+  
