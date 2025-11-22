@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
-import heroImage from "../../assets/dev.jpg";
-import cvFile from "../../assets/cv.pdf";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import { NavLink } from "react-router-dom";
+import heroBg from "../../assets/dev.jpg";
+import cvFile from "../../assets/cv.pdf"; // ✅ CV file import
 
-function Home() {
+const Home = () => {
+  // CV Download Function
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = cvFile;
@@ -15,64 +14,49 @@ function Home() {
     document.body.removeChild(link);
   };
 
+  useEffect(() => {
+    // Fade in animation
+    const elements = document.querySelectorAll(".fade-start");
+    elements.forEach((el, i) => {
+      setTimeout(() => el.classList.add("fade-end"), i * 150);
+    });
+
+    // Parallax Scroll
+    const parallax = document.querySelector(".parallax-bg");
+    const handleScroll = () => {
+      let offset = window.scrollY * 0.3;
+      parallax.style.transform = `translateY(${offset}px) scale(1.05)`;
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="hero-section">
-      <div className="hero-container">
-        <div className="hero-text">
-          <h3 className="intro">Hi 👋, I'm</h3>
-          <h1 className="name">Dev Koshti</h1>
+    <section className="home">
+      <div className="parallax-bg">
+        <img src={heroBg} alt="background" />
+      </div>
 
-          <h2 className="role">
-            I'm a
-            <div className="rotating-text-wrapper">
-              <div className="rotating-text-container">
-                <span className="rotating-text-item" style={{ "--color1": "#00bcd4", "--color2": "#8e2de2" }}>
-                  Web Designer
-                </span>
-                <span className="rotating-text-item" style={{ "--color1": "#ff6a00", "--color2": "#ee0979" }}>
-                  Frontend Developer
-                </span>
-              </div>
-            </div>
-          </h2>
+      <div className="home-container fade-start">
+        <h1>
+          Hi, I'm <span>Dev Koshti</span>
+        </h1>
 
-          <p className="hero-description">
-            I craft modern, user-friendly, and visually engaging websites.
-            Passionate about UI/UX, responsive design, and bringing ideas to
-            life through clean code.
-          </p>
+        <p className="fade-start delay-1">
+          A Creative Web Designer crafting smooth and modern digital
+          experiences.
+        </p>
 
-          <div className="hero-buttons">
-            <button className="download-btn" onClick={handleDownload}>
-              <i className="fas fa-download"></i> Download CV
-            </button>
-            <NavLink to="/contact" className="contact-btn">
-              <i className="fas fa-envelope"></i> Contact Me
-            </NavLink>
-          </div>
-
-          <div className="social-icons">
-            <a href="https://github.com/Devkoshti16" target="_blank" rel="noreferrer">
-              <i className="fab fa-github"></i>
-            </a>
-            <a href="www.linkedin.com/in/dev-koshti" target="_blank" rel="noreferrer">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/devkoshti_" target="_blank" rel="noreferrer">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="mailto:devkoshti16@gamil.com">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-
-        <div className="hero-img">
-          <img src={heroImage} alt="Dev Koshti" />
+        <div className="btn-group">
+          {/* Only CV Download Button */}
+          <button className="btn cv-btn fade-start delay-2" onClick={handleDownload}>
+            <i className="fas fa-download"></i> Download CV
+          </button>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Home;
