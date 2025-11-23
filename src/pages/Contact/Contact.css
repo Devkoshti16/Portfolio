@@ -12,6 +12,9 @@
 }
 
 /* --- Left Info Section --- */
+.contact-left {
+  animation: zoomInBgLeft 1.8s ease-out forwards;
+}
 .contact-left h3 {
   font-size: 1.8rem;
   font-weight: 600;
@@ -74,6 +77,7 @@
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid var(--border-dark);
+  animation: zoomInBgRight 1.8s ease-out forwards;
 }
 
 .form-group {
@@ -126,10 +130,6 @@
   border-radius: 6px;
   transition: 0.3s ease;
   font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
   background: linear-gradient(
     90deg,
     var(--secondary-glow),
@@ -255,7 +255,7 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .contact-info-card {
     flex: 1 1 100%;
     max-width: none;

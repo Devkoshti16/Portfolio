@@ -33,6 +33,7 @@
   flex-direction: column;
   align-items: center;
   backdrop-filter: blur(10px);
+  animation: zoomInBgUp 1.8s ease-out forwards;
 }
 
 .skill-card:hover {

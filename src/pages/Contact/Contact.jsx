@@ -124,7 +124,7 @@ function Contact() {
               )}
 
               <button type="submit" className="submit-btn">
-                Send Message <i className="fas fa-paper-plane"></i>
+                Send Message
               </button>
             </form>
           </div>

@@ -15,14 +15,14 @@ import project8 from "../../assets/project8.jpg";
 
 function Projects() {
   const projectList = [
-    { id: 1, name: "Topworkvibes.com", description: "Business event and team planner.", image: project1, link: "https://topworkvibes.com/", tags: ["WordPress", "Elementor", "Events"] },
-    { id: 2, name: "Topmeetplan.com", description: "A first-class meeting scheduler.", image: project2, link: "https://topmeetplan.com/", tags: ["SaaS", "React", "Node.js"] },
-    { id: 3, name: "Smoothick.com", description: "Find the latest electronics from top brands.", image: project3, link: "https://smoothick.com", tags: ["E-commerce", "Shopify", "Liquid"] },
-    { id: 4, name: "Myproseminar.com", description: "Build communication and leadership skills.", image: project4, link: "https://myproseminar.com", tags: ["LMS", "WordPress", "LearnDash"] },
-    { id: 5, name: "Wordpresbuild.com", description: "Automate your scheduling process.", image: project5, link: "https://wordpresbuild.com", tags: ["SaaS", "WordPress", "Bookings"] },
+    { id: 1, name: "Topworkvibes.com", description: "Business event and team planner.", image: project1, link: "https://topworkvibes.com/", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
+    { id: 2, name: "Topmeetplan.com", description: "A first-class meeting scheduler.", image: project2, link: "https://topmeetplan.com/", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
+    { id: 3, name: "Smoothick.com", description: "Find the latest electronics from top brands.", image: project3, link: "https://smoothick.com", tags: ["E-commerce", "HTML", "Scss", "Bootstrap", "javascript"] },
+    { id: 4, name: "Myproseminar.com", description: "Build communication and leadership skills.", image: project4, link: "https://myproseminar.com", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
+    { id: 5, name: "Wordpresbuild.com", description: "Automate your scheduling process.", image: project5, link: "https://wordpresbuild.com", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
     { id: 6, name: "Lanisana.com", description: "Best quality electrical products online.", image: project6, link: "https://lanisana.com", tags: ["E-commerce", "WooCommerce"] },
-    { id: 7, name: "Blazinsports.com", description: "Top-quality sports products for players.", image: project7, link: "https://blazinsports.com", tags: ["E-commerce", "Shopify", "Sports"] },
-    { id: 8, name: "Docsshipping.com", description: "Reliable document shipping.", image: project8, link: "https://docsshipping.com", tags: ["Logistics", "WordPress", "Forms"] },
+    { id: 7, name: "Blazinsports.com", description: "Top-quality sports products for players.", image: project7, link: "https://blazinsports.com", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
+    { id: 8, name: "Docsshipping.com", description: "Reliable document shipping.", image: project8, link: "https://docsshipping.com", tags: ["Logistics", "Plans", "Documents"] },
   ];
 
   return (
