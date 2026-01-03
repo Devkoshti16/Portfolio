@@ -68,7 +68,7 @@
   height: 100%;
   object-fit: cover;
   object-position: 80% 20%;
-  opacity: 0.4;
+  opacity: 0.5;
   filter: brightness(0.7);
   transition: transform 0.2s ease-out;
 }

@@ -19,7 +19,7 @@
 
 .loader {
   text-align: center;
-  color: #fff;
+  color: var(--white);
   font-family: "Poppins", sans-serif;
   position: relative;
   animation: fadeInUp 1s ease;
@@ -53,15 +53,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #fff;
-}
-
-.loader-sub {
-  font-size: 0.9rem;
-  color: #ccc;
-  letter-spacing: 1px;
-  margin-top: 6px;
-  animation: fadeIn 1.2s ease-in-out infinite alternate;
+  color: var(--white);
 }
 
 /* Animations */
@@ -91,7 +83,7 @@
   }
 }
 
-/* Responsive Design */
+/* Tablet View */
 @media (max-width: 768px) {
   .orbit {
     width: 70px;
@@ -107,12 +99,9 @@
   .loader-text {
     font-size: 1.2rem;
   }
-
-  .loader-sub {
-    font-size: 0.85rem;
-  }
 }
 
+/* Mobile View */
 @media (max-width: 480px) {
   .orbit {
     width: 55px;
@@ -128,9 +117,5 @@
   .loader-text {
     font-size: 1rem;
     letter-spacing: 1.2px;
-  }
-
-  .loader-sub {
-    font-size: 0.8rem;
   }
 }

@@ -44,7 +44,7 @@ const Home = () => {
         </h1>
 
         <p className="fade-start delay-1">
-          A Creative Web Designer crafting smooth and modern digital
+          Creative Web Designer & Frontend Developer crafting smooth and modern digital
           experiences.
         </p>
 

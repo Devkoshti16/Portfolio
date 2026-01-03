@@ -5,7 +5,7 @@ const Preloader = () => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setFadeOut(true), 1800); // Loader time
+    const timer = setTimeout(() => setFadeOut(true), 1800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -16,7 +16,6 @@ const Preloader = () => {
           <div className="planet"></div>
         </div>
         <h2 className="loader-text">Dev Koshti</h2>
-        <p className="loader-sub">Crafting Digital Experiences</p>
       </div>
     </div>
   );
