@@ -7,7 +7,8 @@ import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import Preloader from "./components/Preloader/Preloader";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import 'animate.css';
+import "animate.css";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,6 +34,8 @@ function App() {
         <Route path="/project" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      <Footer />
     </Router>
   );
 }

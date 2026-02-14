@@ -1,0 +1,54 @@
+.mobile-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--body);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid var(--border-dark);
+  z-index: 1000;
+}
+
+/* Footer Items */
+.footer-item {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: .5s all ease;
+}
+
+.footer-item svg {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+/* Active State */
+.footer-item.active {
+  color: var(--primary-color);
+}
+
+.footer-item.active::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 40px;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* Hide footer on desktop */
+@media (min-width: 768px) {
+  .mobile-footer {
+    display: none;
+  }
+}
