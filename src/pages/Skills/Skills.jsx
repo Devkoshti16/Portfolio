@@ -34,7 +34,7 @@ const skills = [
   {
     id: 5,
     name: "jQuery",
-    level: 20,
+    level: 10,
     icon: "fa-solid fa-code",
     color: "#0769AD",
   },
