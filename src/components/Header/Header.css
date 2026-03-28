@@ -26,6 +26,7 @@
     backdrop-filter 0.4s ease,
     border-bottom 0.4s ease;
   font-family: var(--font-main);
+  backdrop-filter: blur(10px);
 }
 
 .header.sticky {
