@@ -51,7 +51,7 @@
 .loader-text {
   font-size: 1.4rem;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 600;
   color: var(--white);
 }

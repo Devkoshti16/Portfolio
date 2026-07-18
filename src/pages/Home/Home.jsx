@@ -4,11 +4,13 @@ import heroBg from "../../assets/dev.jpg";
 import cvFile from "../../assets/cv.pdf"; // ✅ CV file import
 
 const Home = () => {
+  let Name = "Dev Koshti";
+
   // CV Download Function
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = cvFile;
-    link.download = "Dev-Koshti-CV.pdf";
+    link.download = "Dev-koshti-Front-End-Developer.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -40,17 +42,20 @@ const Home = () => {
 
       <div className="home-container fade-start">
         <h1>
-          Hi, I'm <span>Dev Koshti</span>
+          Hi, I'm <span>{Name}</span>
         </h1>
 
         <p className="fade-start delay-1">
-          Creative Web Designer & Frontend Developer crafting smooth and modern digital
-          experiences.
+          Creative Web Designer & Frontend Developer crafting smooth and modern
+          digital experiences.
         </p>
 
         <div className="btn-group">
           {/* Only CV Download Button */}
-          <button className="btn cv-btn fade-start delay-2" onClick={handleDownload}>
+          <button
+            className="btn cv-btn fade-start delay-2"
+            onClick={handleDownload}
+          >
             <i className="fas fa-download"></i> Download CV
           </button>
         </div>
