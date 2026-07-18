@@ -12,17 +12,20 @@ import project5 from "../../assets/project5.jpg";
 import project6 from "../../assets/project6.jpg";
 import project7 from "../../assets/project7.jpg";
 import project8 from "../../assets/project8.jpg";
+import project9 from "../../assets/project9.png";
 
+// Project Details
 function Projects() {
   const projectList = [
-    { id: 1, name: "Topworkvibes.com", description: "Business event and team planner.", image: project1, link: "https://topworkvibes.com/", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
-    { id: 2, name: "Topmeetplan.com", description: "A first-class meeting scheduler.", image: project2, link: "https://topmeetplan.com/", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
-    { id: 3, name: "Smoothick.com", description: "Find the latest electronics from top brands.", image: project3, link: "https://smoothick.com", tags: ["E-commerce", "HTML", "Scss", "Bootstrap", "javascript"] },
-    { id: 4, name: "Myproseminar.com", description: "Build communication and leadership skills.", image: project4, link: "https://myproseminar.com", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
-    { id: 5, name: "Wordpresbuild.com", description: "Automate your scheduling process.", image: project5, link: "https://wordpresbuild.com", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
-    { id: 6, name: "Lanisana.com", description: "Best quality electrical products online.", image: project6, link: "https://lanisana.com", tags: ["E-commerce", "WooCommerce"] },
+    { id: 1, name: "Docsshipping.com", description: "Reliable document shipping.", image: project8, link: "https://docsshipping.com", tags: ["Logistics", "Plans", "Documents"] },
+    { id: 2, name: "Smoothick.com", description: "Find the latest electronics from top brands.", image: project3, link: "https://smoothick.com", tags: ["E-commerce", "HTML", "Scss", "Bootstrap", "javascript"] },
+    { id: 3, name: "Myproseminar.com", description: "Build communication and leadership skills.", image: project4, link: "https://myproseminar.com", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
+    { id: 4, name: "Topmeetplan.com", description: "A first-class meeting scheduler.", image: project2, link: "https://topmeetplan.com/", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
+    { id: 5, name: "Lanisana.com", description: "Best quality electrical products online.", image: project6, link: "https://lanisana.com", tags: ["E-commerce", "WooCommerce"] },
+    { id: 6, name: "Wordpresbuild.com", description: "Automate your scheduling process.", image: project5, link: "https://wordpresbuild.com", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
     { id: 7, name: "Blazinsports.com", description: "Top-quality sports products for players.", image: project7, link: "https://blazinsports.com", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
-    { id: 8, name: "Docsshipping.com", description: "Reliable document shipping.", image: project8, link: "https://docsshipping.com", tags: ["Logistics", "Plans", "Documents"] },
+    { id: 8, name: "Topworkvibes.com", description: "Business event and team planner.", image: project1, link: "https://topworkvibes.com/", tags: ["HTML", "Scss", "Bootstrap", "javascript"] },
+    { id: 9, name: "Jiteshpetrochemicals.com", description: "Petrochemical products for industrial use. client project", image: project9, link: "https://www.jiteshpetrochemicals.com/", tags: ["React", "CSS", "Tailwind", "AI"] },
   ];
 
   return (
