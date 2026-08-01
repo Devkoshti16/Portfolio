@@ -3,10 +3,9 @@
 .skills-section {
   position: relative;
   padding: 120px 5%;
-  background: #0f0f17;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
-  color: #fff;
+  color: var(--white);
 }
 
 /* Animated Background Blobs */
@@ -23,13 +22,13 @@
 }
 
 .skills-bg::before {
-  background: #7f5af0;
+  background: var(--primary-color);
   top: -100px;
   left: -100px;
 }
 
 .skills-bg::after {
-  background: #00f5d4;
+  background: var(--secondary-color);
   bottom: -100px;
   right: -100px;
 }
@@ -48,7 +47,7 @@
 
 .skills-sub {
   text-align: center;
-  color: #aaa;
+  color: var(--sub-text);
   margin-bottom: 60px;
   font-size: 1rem;
 }
@@ -78,7 +77,7 @@
   inset: 0;
   border-radius: 20px;
   padding: 1px;
-  background: linear-gradient(120deg, #7f5af0, #00f5d4);
+  background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
   -webkit-mask: linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
@@ -115,7 +114,7 @@
 
 .skill-header span {
   font-weight: 600;
-  color: #00f5d4;
+  color: var(--secondary-color);
 }
 
 /* Skill Bar */

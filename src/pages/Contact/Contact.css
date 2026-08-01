@@ -18,7 +18,7 @@
 .contact-left h3 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--white);
 }
 
 .contact-left p {
@@ -62,7 +62,7 @@
 
 .info-text h4 {
   margin: 0 0 5px 0;
-  color: #fff;
+  color: var(--white);
   font-weight: 600;
 }
 
@@ -95,7 +95,6 @@
 .contact-form textarea {
   width: 100%;
   padding: 12px 16px;
-  background: #0a0a0c;
   border: 1px solid var(--border-dark);
   border-radius: 8px;
   color: var(--text-light);
